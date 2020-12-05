@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WeaterComponentComponent } from './weater-component/weater-component.component';
-import { RouterModule } from '@angular/router'; //importar rutas
+//import { RouterModule } from '@angular/router'; //importar rutas
 
 
 @NgModule({
