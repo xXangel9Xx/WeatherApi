@@ -13,7 +13,6 @@ import { WeatherModule } from './modules/weather/weather.module'
     RouterModule.forRoot([
       {path: '', component: WeaterComponentComponent},
     ]),
-
     BrowserModule,
     WeatherModule
   ],
