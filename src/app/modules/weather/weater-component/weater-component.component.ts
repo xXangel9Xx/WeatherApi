@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange} from '@angular/core';
 //const axios = require('axios').default;
 import axios from 'axios';
 @Component({
@@ -7,22 +7,29 @@ import axios from 'axios';
   styleUrls: ['./weater-component.component.scss']
 })
 export class WeaterComponentComponent implements OnInit {
-  
-  getFunction(){
-    axios.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=8a6c09d5b598e9d813b3a4396460167b').then(
+  data:any 
+  async getFunction(){
+     let data = await axios.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=8a6c09d5b598e9d813b3a4396460167b').then(
       (response)=>{
-        console.log(response)
+        return response.data
       }
     ).catch((error)=>{
       console.error(error)
     })
+    return data
   }
 
   constructor(){}
 
-  ngOnInit(): void {
-   this.getFunction()
-  }
+  async ngOnInit(){
+     await this.getFunction().then((res)=>{ this.data = res })
+     console.log(this.data)
+  };
+  
+  /*ngOnChanges(changes: SimpleChange) {
+    // changes.prop contains the old and the new value...
+    console.log(changes)
+  }*/
 
 
 }/*
