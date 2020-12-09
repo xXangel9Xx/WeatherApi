@@ -43,4 +43,91 @@
         66.666% {opacity: 1}
         100% {opacity: 0;}
     }
+    .input-search{
+        margin-top: 5%;
+        margin-left: 4%;
+        text-align: center;
+        background-color: white;
+        width: 90%;
+    }
+    ::placeholder{color: black;}
+    .container-data-weather{
+        position: absolute;
+        background: #FFFFFF;
+        opacity: 0.8;
+        box-shadow: 0px 0px 10px rgba(63, 63, 68, 1), 0px 1px 3px rgba(63, 63, 105, 1);
+        border-radius: 5px;
+        width: 65vw;
+        height: 65vh;
+        margin-left: 19vw;
+        margin-top: 20vh;
+    }
+    .weather{
+        text-align: center;
+        background-image: url('../../../../assets/images/unnamed.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 70px;
+    }
+    .container-search-data{
+        height: 59vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;}
+    .data-weather-main{padding-top: 47px;}
 }
+@media screen and (min-width:500px){.weather{width: 100px;
+    height: 85px;}}
+@media screen and (min-width:600px){.weather{   
+     width: 133px;
+    height: 108px;}}
+@media screen and (min-width:900px){
+    .weather{   
+        width: 150px;
+        height: 130px;
+    }
+    .data-weather-main{padding-top: 51px;}
+    }
+@media screen and (min-width:1000px){
+    .weather{ width: 170px;}
+    .data-weather-main{padding-top: 57px;}
+}
+@media screen and (min-width:1100px){.weather{ width: 185px;
+    height: 146px;
+}}
+@media screen and (min-width:1200px){
+    .weather{ width: 200px;
+    height: 148px;}
+    .data-weather-main{padding-top: 66px;}
+}
+@media screen and (min-width:1300px){
+    .weather{ width: 212px;
+    height: 151px;}}
+@media screen and (min-width:1400px){
+    .weather{ width: 228px;
+    height: 164px;}}
+@media screen and (min-width:1500px){
+        .weather{width: 244px;
+            height: 178px;
+        }
+        .data-weather-main{padding-top: 88px;}
+}
+@media screen and (min-width:1600px){
+        .weather{width: 261px;
+            height: 188px;}}
+@media screen and (min-width:1700px){
+        .weather{width: 283px;
+            height: 202px;
+        }
+        .data-weather-main{padding-top: 104px;}
+}
+@media screen and (min-width:1800px){
+        .weather{width: 296px;
+            height: 214px;}}
+@media screen and (min-width:1900px){
+        .weather{width: 313px;
+            height: 228px;}}
+@media screen and (min-width:2000px){
+        .weather{width: 329px;
+            height: 242px;}}
