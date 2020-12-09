@@ -6,32 +6,38 @@
         <div *ngIf="data" class="container-data-weather" >
             <input type="text" placeholder={{data.name}} class="input-search">
             <div class="container-search-data">
-                <div [ngClass]="{'weather':data.weather[0].main=='Clouds'}"><!--[ngClass] agrega condicionalmente una clase en angular-->
+                <div class="weather"  [ngClass]="{'clouds':data.weather[0].main=='Clouds',
+                'rain':data.weather[0].main=='Rain'}"><!--[ngClass] agrega condicionalmente una clase en angular-->
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     {{data.weather[0].description}}
                     </p>
                 </div>
-                <div class="weather">
+                <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
+                'rain':data.weather[0].main=='Rain'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     {{data.main.temp}} K°
                     </p>
                 </div>
-                <div class="weather">
+                <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
+                'rain':data.weather[0].main=='Rain'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     minima<br>
                     {{data.main.temp_min}} K°
                     </p>
                 </div>
-                <div class="weather">
+                <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
+                'rain':data.weather[0].main=='Rain'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     maxima<br>
                     {{data.main.temp_max}} K°
                     </p>
                 </div>
-                <div class="weather">
+                <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
+                'rain':data.weather[0].main=='Rain'
+            }">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     humedad<br>
                     {{data.main.humidity}} K°

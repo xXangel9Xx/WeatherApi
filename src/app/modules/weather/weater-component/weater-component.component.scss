@@ -62,11 +62,15 @@
         margin-left: 19vw;
         margin-top: 20vh;
     }
-    .weather{
-        text-align: center;
-        background-image: url('../../../../assets/images/unnamed.png');
+    .clouds,.rain{ 
+        text-align: center;       
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    .clouds{background-image: url('../../../../assets/images/nubes.jpg');}
+    .rain{background-image: url('../../../../assets/images/unnamed.png');}
+    
+    .weather{
         width: 80px;
         height: 70px;
     }
