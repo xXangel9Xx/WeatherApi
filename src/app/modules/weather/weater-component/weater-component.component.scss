@@ -43,9 +43,12 @@
         66.666% {opacity: 1}
         100% {opacity: 0;}
     }
-    .input-search{
+    .input-search-container{
         margin-top: 5%;
-        margin-left: 4%;
+        margin-left: 2%;  
+        width:100%;
+    }
+    .input-search{
         text-align: center;
         background-color: white;
         width: 90%;

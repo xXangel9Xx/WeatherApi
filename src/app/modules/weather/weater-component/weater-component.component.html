@@ -4,7 +4,12 @@
         <div class="slider-2"></div>
         <div class="slider-3"></div>
         <div *ngIf="data" class="container-data-weather" >
-            <input type="text" placeholder={{data.name}} class="input-search">
+            <div class="input-search-container" >
+                <input type="text" placeholder={{data.name}} class="input-search" (input)="inputSearchNameCity($event)">  
+                <button type="submit" (click)="searchForName(search)">Search</button>
+            </div>
+
+
             <div class="container-search-data">
                 <div class="weather"  [ngClass]="{'clouds':data.weather[0].main=='Clouds',
                 'rain':data.weather[0].main=='Rain'}"><!-- (input) [ngClass] agrega condicionalmente una clase en angular-->

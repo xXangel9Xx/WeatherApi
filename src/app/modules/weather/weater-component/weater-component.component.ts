@@ -1,7 +1,6 @@
 import { Component, OnInit, SimpleChange} from '@angular/core';
 import { AxiosGetServiceService } from '.././service/axios-get-service.service'
-//const axios = require('axios').default;
-import axios from 'axios';
+//import axios from 'axios';
 @Component({
   selector: 'app-weater-component',
   templateUrl: './weater-component.component.html',
@@ -10,16 +9,30 @@ import axios from 'axios';
 export class WeaterComponentComponent implements OnInit {
   data:any 
   city:any
+  search:string
+  searchId:number
   //init
 
   constructor(
     private axiosGetServiceService: AxiosGetServiceService
     ){}
    ngOnInit(){
-    this.axiosGetServiceService.getFunction().then((res)=>{ this.data = res })
-     console.log(this.data)
+    this.axiosGetServiceService.getFunction("London").then((res)=>{ this.data = res 
+      this.searchId = res.id})
   };
+  inputSearchNameCity(e){this.search = e.target.value}
+
+  searchForName(search){
+    this.axiosGetServiceService.getFunction(search).then((res)=>{ this.data = res})
+  }
+
+  searchID(){
+    this.axiosGetServiceService.getFunctionForId(12).then((res)=>{ this.data = res})
+  }
+}
+
 //algo asi
+/*
   async getShow(){
     let data = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=8a6c09d5b598e9d813b3a4396460167b`).then(
       (response)=>{
@@ -30,9 +43,8 @@ export class WeaterComponentComponent implements OnInit {
     })
     this.city = data
   }
-  
-
-}/*
+  */
+/*
 try{
   let  response = await axios.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=8a6c09d5b598e9d813b3a4396460167b')
    console.log(response)
