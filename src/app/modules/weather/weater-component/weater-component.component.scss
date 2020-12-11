@@ -1,7 +1,18 @@
 @media screen and (min-width:300px){
     .images-slider{
+        display: flex;
         width: 100vw;
         height: 100vh;
+    }
+    .arrow{width:40px}
+    .image-rigth{    
+        position: absolute;
+        margin-top: 50vh;
+        margin-left: 86vw;
+    }
+    .image-left{
+        position: absolute;
+        margin-top: 50vh;
     }
     .slider-1,.slider-2,.slider-3{
         background-size: cover;
@@ -65,14 +76,14 @@
         margin-left: 19vw;
         margin-top: 20vh;
     }
-    .clouds,.rain{ 
+    .clouds,.rain,.clear{ 
         text-align: center;       
         background-size: cover;
         background-repeat: no-repeat;
     }
     .clouds{background-image: url('../../../../assets/images/nubes.jpg');}
     .rain{background-image: url('../../../../assets/images/unnamed.png');}
-    
+    .clear{background-image: url('../../../../assets/images/soleado.jpeg');}
     .weather{
         width: 80px;
         height: 70px;
@@ -84,19 +95,32 @@
         flex-wrap: wrap;}
     .data-weather-main{padding-top: 47px;}
 }
-@media screen and (min-width:500px){.weather{width: 100px;
-    height: 85px;}}
-@media screen and (min-width:600px){.weather{   
+@media screen and (min-width:400px){.image-rigth{margin-left: 90vw;}}
+
+@media screen and (min-width:500px){
+    .image-left{margin-left: 1vw;}
+    .weather{
+        width: 100px;
+        height: 85px;
+    }
+}
+@media screen and (min-width:600px){
+    .weather{   
      width: 133px;
-    height: 108px;}}
+    height: 108px;
+    }
+    .image-rigth{margin-left: 93vw;}
+}
+
 @media screen and (min-width:900px){
     .weather{   
         width: 150px;
         height: 130px;
     }
     .data-weather-main{padding-top: 51px;}
-    }
+}
 @media screen and (min-width:1000px){
+    .image-rigth{margin-left: 95vw}
     .weather{ width: 170px;}
     .data-weather-main{padding-top: 57px;}
 }
@@ -104,6 +128,7 @@
     height: 146px;
 }}
 @media screen and (min-width:1200px){
+    .image-rigth{margin-left: 96vw;}
     .weather{ width: 200px;
     height: 148px;}
     .data-weather-main{padding-top: 66px;}

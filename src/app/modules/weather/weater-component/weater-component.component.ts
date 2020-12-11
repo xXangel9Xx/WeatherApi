@@ -18,18 +18,30 @@ export class WeaterComponentComponent implements OnInit {
     ){}
    ngOnInit(){
     this.axiosGetServiceService.getFunction("London").then((res)=>{ this.data = res 
-      this.searchId = res.id})
+      this.searchId = res.id
+      
+    })
   };
   inputSearchNameCity(e){this.search = e.target.value}
 
   searchForName(search){
-    this.axiosGetServiceService.getFunction(search).then((res)=>{ this.data = res})
+    search = search.toUpperCase()
+    this.axiosGetServiceService.getFunction(search).then((res)=>{ this.data = res
+    console.log(res.id)
+    })
   }
-
-  searchID(){
-    this.axiosGetServiceService.getFunctionForId(12).then((res)=>{ this.data = res})
+/*
+  searchIDSum(searchId){
+    searchId+=1
+    console.log(searchId)
+    this.axiosGetServiceService.getFunctionForId(searchId).then((res)=>{ this.data = res})
   }
-}
+  searchIDRest(searchId){
+    searchId-=1
+    console.log(searchId)
+    this.axiosGetServiceService.getFunctionForId(searchId).then((res)=>{ this.data = res})
+  }
+*/}
 
 //algo asi
 /*

@@ -3,29 +3,32 @@
         <div class="slider-1"></div>
         <div class="slider-2"></div>
         <div class="slider-3"></div>
+        <!--<img src="../../../../assets/images/izquierda.svg" alt="izquierda" class="image-left arrow" (click)="searchIDRest(searchId)">-->
         <div *ngIf="data" class="container-data-weather" >
             <div class="input-search-container" >
                 <input type="text" placeholder={{data.name}} class="input-search" (input)="inputSearchNameCity($event)">  
                 <button type="submit" (click)="searchForName(search)">Search</button>
             </div>
-
-
             <div class="container-search-data">
                 <div class="weather"  [ngClass]="{'clouds':data.weather[0].main=='Clouds',
-                'rain':data.weather[0].main=='Rain'}"><!-- (input) [ngClass] agrega condicionalmente una clase en angular-->
+                'rain':data.weather[0].main=='Rain',
+                'clear':data.weather[0].main=='Clear'
+                }"><!-- (input) [ngClass] agrega condicionalmente una clase en angular-->
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     {{data.weather[0].description}}
                     </p>
                 </div>
                 <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
-                'rain':data.weather[0].main=='Rain'}">
+                'rain':data.weather[0].main=='Rain',
+                'clear':data.weather[0].main=='Clear'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     {{data.main.temp}} K°
                     </p>
                 </div>
                 <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
-                'rain':data.weather[0].main=='Rain'}">
+                'rain':data.weather[0].main=='Rain',
+                'clear':data.weather[0].main=='Clear'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     minima<br>
@@ -33,7 +36,8 @@
                     </p>
                 </div>
                 <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
-                'rain':data.weather[0].main=='Rain'}">
+                'rain':data.weather[0].main=='Rain',
+                'clear':data.weather[0].main=='Clear'}">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     temperatura<br>
                     maxima<br>
@@ -41,7 +45,8 @@
                     </p>
                 </div>
                 <div class="weather" [ngClass]="{'clouds':data.weather[0].main=='Clouds',
-                'rain':data.weather[0].main=='Rain'
+                'rain':data.weather[0].main=='Rain',
+                'clear':data.weather[0].main=='Clear'
             }">
                     <p class="data-weather-main">{{data.weather[0].main}}<br> 
                     humedad<br>
@@ -49,8 +54,9 @@
                     </p>
                 </div>
             </div>
-        </div>        
-
+        </div>  
+       <!-- <img src="../../../../assets/images/derecha.svg" alt="derecha" class="image-rigth arrow" (click)="searchIDSum(searchId)">-->
     </div>
+
 
 </div>
