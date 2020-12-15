@@ -16,14 +16,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
   ![inicio app](https://user-images.githubusercontent.com/58712435/102158332-9f435900-3e57-11eb-83fb-0152cc1f2263.png?raw=true "inicio app")
 
+# Search city
 
+  For search the city just we write the name in the input.
 
+![search](https://user-images.githubusercontent.com/58712435/102158457-e16c9a80-3e57-11eb-9841-c178e1ee804b.png?raw=true "search")
 
+  Then we give onclick in the button Search
 
+![before search](https://user-images.githubusercontent.com/58712435/102158535-0c56ee80-3e58-11eb-9986-a4359321a211.png?raw=true "before search")
 
+  Notice how the background images change, that's because we have an animation (fading slider).
 
+# Is Responsive.
+  Like all my projects this is responsive it can be seen on screens from 300px to 2000px
 
-
+![responsive](https://user-images.githubusercontent.com/58712435/102158744-7f606500-3e58-11eb-9ab2-d2baf87f605b.png?raw=true "responsive")
 
 ## Development server
 
