@@ -1,6 +1,24 @@
 # Weather
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+![Angular](https://user-images.githubusercontent.com/58712435/102169212-1d0f6080-3e68-11eb-9561-ca9d99d09131.png?raw=true "Angular")
+
+# ¿What is project about?
+  Is the custom front-end of Weather Api https://openweathermap.org/api.
+  I utilize axios for  make the get.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Development server
 
