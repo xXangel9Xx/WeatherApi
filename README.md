@@ -12,8 +12,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![axios](https://user-images.githubusercontent.com/58712435/102169831-6d3af280-3e69-11eb-9f59-04c8de1c7f1b.jpg?raw=true "Axios")
 
+# Page main 
 
-
+  ![inicio app](https://user-images.githubusercontent.com/58712435/102158332-9f435900-3e57-11eb-83fb-0152cc1f2263.png?raw=true "inicio app")
 
 
 
